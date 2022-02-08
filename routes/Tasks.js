@@ -10,6 +10,7 @@ router.post('/create',urlencodedParser, task_controller.task_create);
 router.get('/:id', task_controller.findById);
 router.get('/', task_controller.findAll);
 router.put('/:id/update', task_controller.task_update);
+router.put('/:id/state/:state', task_controller.state_update);
 router.delete('/:id/delete', task_controller.task_delete);
 module.exports = router;
   
